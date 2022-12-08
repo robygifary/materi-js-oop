@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator instanceof</title>
+  </head>
+  <body>
+    <script>
+      // instanceof = untuk mengetahui sebuah object itu terbuat dari kelas yg mana
+      // jika menggunakan pewarisan hasilnya akan menjadi true
+      class Employee {}
+
+      class Manager extends Employee {}
+
+      const roby = new Employee();
+      const syakir = new Manager();
+
+      console.info(typeof roby);
+      console.info(typeof syakir);
+
+      console.info(roby instanceof Employee); // true
+      console.info(roby instanceof Manager); // false
+
+      console.info(syakir instanceof Employee); // true
+      console.info(syakir instanceof Manager); // true
+    </script>
+  </body>
+</html>
